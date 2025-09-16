@@ -37,6 +37,7 @@ ul li {
     border: 2px solid red;
     background-color: #7B1DD3;
     color: white;
+    list-style-type: none;
 }
 
 /* .connectLinks a:link {
@@ -57,4 +58,28 @@ a:hover {
 
 a:active {
     color: green;
+}
+
+.expList {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+}
+
+.expList div {
+    margin-right: 10%;
+}
+
+#Connect {
+    display: flex;
+    align-items: center;
+}
+
+#Connect * {
+    margin-right: 5%;
+}
+
+nav * {
+    display: inline-block;
+    margin: 5% 3px 5% 3px;
 }
