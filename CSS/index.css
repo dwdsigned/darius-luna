@@ -83,3 +83,51 @@ nav * {
     display: inline-block;
     margin: 5% 3px 5% 3px;
 }
+
+
+/* CSS for smartphones/mobile devices */
+@media screen and (max-width: 650px) {
+    h1 {
+    font-size: 20px;
+    color: orange;
+    font-style: bold;
+    }
+
+    ul li {
+    border: 1px solid white;
+    background-color: #7B1DD3;
+    color: white;
+    list-style-type: none;
+    display: flex;
+    }
+
+    h2 {
+    font-size: 15px;
+    font-weight: normal;
+    color: orange;
+    }
+    }
+
+
+    /* CSS for tablets */
+@media (min-width: 651px) and (max-width: 950px) {
+    h1 {
+    font-size: 30px;
+    color: yellowgreen;
+    font-style: bold;
+    }
+
+    ul li {
+    border: 3px dashed white;
+    background-color: darkolivegreen;
+    color: white;
+    list-style-type: none;
+    display: flex;
+    }
+
+    h2 {
+    font-size: 25px;
+    font-weight: bolder;
+    color: lightskyblue;
+    }
+  }
