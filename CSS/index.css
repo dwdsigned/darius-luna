@@ -35,7 +35,7 @@ h2 {
 
 ul li {
     border: 2px solid red;
-    background-color: #7B1DD3;
+    background-color: #7B1DF3;
     color: white;
     list-style-type: none;
 }
@@ -84,6 +84,12 @@ nav * {
     margin: 5% 3px 5% 3px;
 }
 
+#skills ul > li {
+        display: inline-block;
+        flex-direction: column;
+        margin: 0 3% 0 0;
+    }
+
 
 /* CSS for smartphones/mobile devices */
 @media screen and (max-width: 650px) {
@@ -106,8 +112,13 @@ nav * {
     font-weight: normal;
     color: orange;
     }
-    }
 
+    #skills ul > li {
+        display: inline-block;
+        flex-direction: column;
+        margin: 0 4% 0 0;
+    }
+    }
 
     /* CSS for tablets */
 @media (min-width: 651px) and (max-width: 950px) {
@@ -129,5 +140,10 @@ nav * {
     font-size: 25px;
     font-weight: bolder;
     color: lightskyblue;
+    }
+     #skills ul > li {
+        display: inline-block;
+        flex-direction: column;
+        margin: 0 5% 0 0;
     }
   }
