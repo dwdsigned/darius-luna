@@ -64,3 +64,18 @@ messageForm.addEventListener("submit", event => {
         messageForm.reset();
 });
 
+
+fetch('https://api.github.com/users/dwdsigned/repos',
+        {method: "GET"}
+).then(response => {
+    if (!response.ok) {
+      throw new Error('Request failed');
+    }
+    return response.json(); // Parse the response as JSON
+  })
+  .then(repositories => {
+    console.log(repositories); // Do something with the data
+  })
+  .catch(error => {
+    console.error('An error occurred:', error);
+  });
