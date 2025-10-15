@@ -63,3 +63,55 @@ messageForm.addEventListener("submit", event => {
         messageList.appendChild(newMessage);
         messageForm.reset();
 });
+
+// fetch('https://api.github.com/users/dwdsigned/repos')
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error('Request failed');
+//     }
+//     return response.json(); // Parse the response as JSON
+//   })
+//   .then(response => {
+//     // console.log(response); // Do something with the data
+//     let repositories = JSON.parse(JSON.stringify(response));
+// //     console.log(JSON.stringify(repositories));
+//         //console.log("repo", repositories);
+//         return repositories;
+//     // JSON.parse(this.repositories);
+//     // console.log(JSON.parse(this.repositories));
+//   })
+//   .catch(error => {
+//     console.error('An error occurred:', error);
+//   });
+
+// let projectSection = document.getElementById("Projects");
+
+//   let projectList = projectSection.querySelector("ul");
+
+//   for (let i = 0; i < repositories.length; i++) {
+//      let project = document.createElement("li");
+//      project.textContent = repositories.id[i].name;
+//      projectList.appendChild(project);
+//   }
+
+
+ fetch('https://api.github.com/users/dwdsigned/repos')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Request failed');
+    }
+    return response.json();
+  })
+  .then(repositories => {
+    let projectSection = document.getElementById("Projects");
+    let projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++) {
+      let project = document.createElement("li");
+      project.textContent = repositories[i].name;
+      projectList.appendChild(project);
+    }
+  })
+  .catch(error => {
+    console.error('An error occurred:', error);
+  });
